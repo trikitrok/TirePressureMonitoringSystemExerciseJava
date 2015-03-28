@@ -26,16 +26,16 @@ public class Alarm {
 
     private class SafetyRange {
 
-        private double lowerBound;
-        private double higherBound;
+        private double lowerThreshold;
+        private double higherThreshold;
 
-        public SafetyRange(double lowerBound, double higherBound) {
-            this.lowerBound = lowerBound;
-            this.higherBound = higherBound;
+        public SafetyRange(double lowerThreshold, double higherThreshold) {
+            this.lowerThreshold = lowerThreshold;
+            this.higherThreshold = higherThreshold;
         }
 
         public boolean isNotSafe(double value) {
-            return value < lowerBound || higherBound < value;
+            return value < lowerThreshold || higherThreshold < value;
         }
     }
 }
