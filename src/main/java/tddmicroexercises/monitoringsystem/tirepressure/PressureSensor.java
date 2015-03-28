@@ -1,6 +1,8 @@
-package tddmicroexercises.tirepressuremonitoringsystem;
+package tddmicroexercises.monitoringsystem.tirepressure;
 
 import java.util.Random;
+
+import tddmicroexercises.monitoringsystem.Sensor;
 
 public class PressureSensor implements Sensor
 {

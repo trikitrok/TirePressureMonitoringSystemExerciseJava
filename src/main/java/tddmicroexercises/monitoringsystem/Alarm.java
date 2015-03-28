@@ -1,4 +1,4 @@
-package tddmicroexercises.tirepressuremonitoringsystem;
+package tddmicroexercises.monitoringsystem;
 
 public class Alarm {
     private static final double LOW_THRESHOLD = 17;

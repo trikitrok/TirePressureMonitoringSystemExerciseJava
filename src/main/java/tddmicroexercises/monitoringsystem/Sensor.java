@@ -1,4 +1,4 @@
-package tddmicroexercises.tirepressuremonitoringsystem;
+package tddmicroexercises.monitoringsystem;
 
 public interface Sensor {
 
