@@ -8,10 +8,6 @@ public class Alarm {
 
     private boolean alarmOn = false;
 
-    public Alarm() {
-        sensor = new Sensor();
-    }
-
     public Alarm(Sensor sensor) {
         this.sensor = sensor;
     }
