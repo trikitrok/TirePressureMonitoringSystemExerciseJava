@@ -13,15 +13,15 @@ public class Alarm {
     }
 
     public void check() {
-        double psiPressureValue = sensor.popNextPressurePsiValue();
+        double pressure = sensor.popNextPressurePsiValue();
 
-        if (isPressureOutsideSafeRange(psiPressureValue)) {
+        if (isPressureOutsideSafeRange(pressure)) {
             alarmOn = true;
         }
     }
 
-    private boolean isPressureOutsideSafeRange(double psiPressureValue) {
-        return psiPressureValue < LowPressureThreshold || HighPressureThreshold < psiPressureValue;
+    private boolean isPressureOutsideSafeRange(double pressure) {
+        return pressure < LowPressureThreshold || HighPressureThreshold < pressure;
     }
 
     public boolean isAlarmOn() {
