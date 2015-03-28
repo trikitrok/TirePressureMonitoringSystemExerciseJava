@@ -20,12 +20,12 @@ public class Alarm {
     private final double LowPressureThreshold = 17;
     private final double HighPressureThreshold = 21;
 
-    private PressureSensor sensor;
+    private Sensor sensor;
 
     private boolean alarmOn = false;
     private SafetyRange safetyRange;
 
-    public Alarm(PressureSensor sensor) {
+    public Alarm(Sensor sensor) {
         this.sensor = sensor;
         this.safetyRange = new SafetyRange(LowPressureThreshold, HighPressureThreshold);
     }

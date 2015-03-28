@@ -4,7 +4,8 @@ import org.junit.Test;
 
 import static org.hamcrest.Matchers.is;
 import tddmicroexercises.tirepressuremonitoringsystem.Alarm;
-import tddmicroexercises.tirepressuremonitoringsystem.PressureSensor;
+import tddmicroexercises.tirepressuremonitoringsystem.Sensor;
+import tddmicroexercises.tirepressuremonitoringsystem.Sensor;
 import static org.mockito.Mockito.*;
 
 public class AlarmTest {
@@ -38,7 +39,7 @@ public class AlarmTest {
 
     @Test
     public void alarm_should_accept_the_sensor_dependency() {
-        PressureSensor sensor = mock(PressureSensor.class);
+        Sensor sensor = mock(Sensor.class);
         Alarm alarm = new Alarm(sensor);
 
         alarm.check();
@@ -46,8 +47,8 @@ public class AlarmTest {
         verify(sensor).probe();
     }
 
-    private PressureSensor sensorThatDetects(double samplePressure) {
-        PressureSensor sensor = mock(PressureSensor.class);
+    private Sensor sensorThatDetects(double samplePressure) {
+        Sensor sensor = mock(Sensor.class);
         doReturn(samplePressure).when(sensor).probe();
         return sensor;
     }
