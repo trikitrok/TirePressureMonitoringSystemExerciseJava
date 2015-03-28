@@ -39,4 +39,14 @@ public class AlarmTest {
 
         assertThat(alarm.isAlarmOn(), is(true));
     }
+
+    @Test
+    public void alarm_on_for_pressure_over_safe_pressure_range() {
+        double pressureSample = 22.0;
+        Alarm alarm = new FakeAlarm(pressureSample);
+
+        alarm.check();
+
+        assertThat(alarm.isAlarmOn(), is(true));
+    }
 }
