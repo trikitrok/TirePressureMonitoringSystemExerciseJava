@@ -37,7 +37,7 @@ public class AlarmTest {
     }
 
     @Test
-    public void alarm_should_accept_the_sensor_dependency() {
+    public void alarm_should_ask_the_sensor_to_probe() {
         Sensor sensor = mock(Sensor.class);
         Alarm alarm = new Alarm(sensor);
 
