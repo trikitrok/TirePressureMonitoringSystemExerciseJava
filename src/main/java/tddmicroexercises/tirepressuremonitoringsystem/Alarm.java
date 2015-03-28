@@ -1,12 +1,12 @@
 package tddmicroexercises.tirepressuremonitoringsystem;
 
 public class Alarm {
-    private class SafeRange {
+    private class SafetyRange {
 
         private double lowerBound;
         private double higherBound;
 
-        public SafeRange(double lowerBound, double higherBound) {
+        public SafetyRange(double lowerBound, double higherBound) {
             this.lowerBound = lowerBound;
             this.higherBound = higherBound;
         }
@@ -23,17 +23,17 @@ public class Alarm {
     private Sensor sensor;
 
     private boolean alarmOn = false;
-    private SafeRange safeRange;
+    private SafetyRange safetyRange;
 
     public Alarm(Sensor sensor) {
         this.sensor = sensor;
-        this.safeRange = new SafeRange(LowPressureThreshold, HighPressureThreshold);
+        this.safetyRange = new SafetyRange(LowPressureThreshold, HighPressureThreshold);
     }
 
     public void check() {
         double pressure = sensor.probePressure();
 
-        if (safeRange.isNotSafe(pressure)) {
+        if (safetyRange.isNotSafe(pressure)) {
             alarmOn = true;
         }
     }
