@@ -5,7 +5,6 @@ import org.junit.Test;
 import static org.hamcrest.Matchers.is;
 import tddmicroexercises.tirepressuremonitoringsystem.Alarm;
 import tddmicroexercises.tirepressuremonitoringsystem.Sensor;
-import tddmicroexercises.tirepressuremonitoringsystem.Sensor;
 import static org.mockito.Mockito.*;
 
 public class AlarmTest {
