@@ -43,12 +43,12 @@ public class AlarmTest {
 
         alarm.check();
 
-        verify(sensor).popNextPressurePsiValue();
+        verify(sensor).probePressure();
     }
 
     private Sensor sensorThatDetects(double samplePressure) {
         Sensor sensor = mock(Sensor.class);
-        doReturn(samplePressure).when(sensor).popNextPressurePsiValue();
+        doReturn(samplePressure).when(sensor).probePressure();
         return sensor;
     }
 

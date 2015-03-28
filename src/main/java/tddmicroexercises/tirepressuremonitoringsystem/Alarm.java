@@ -13,7 +13,7 @@ public class Alarm {
     }
 
     public void check() {
-        double pressure = sensor.popNextPressurePsiValue();
+        double pressure = sensor.probePressure();
 
         if (isPressureOutsideSafeRange(pressure)) {
             alarmOn = true;
